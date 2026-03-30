@@ -44,3 +44,5 @@ cp storm-trooper.txt ./tie-fighter-3
 mv ./tie-fighter-1 ./tie-fighter-2 ./tie-fighter-3 ../galaxy-far-far-away/
 cd ../galaxy-far-far-away/
 rm -r tie-fighter-2/ tie-fighter-3
+cd x-wing
+touch the-force.txt
