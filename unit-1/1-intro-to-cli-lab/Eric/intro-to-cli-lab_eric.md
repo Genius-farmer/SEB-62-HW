@@ -48,3 +48,5 @@ cd x-wing
 touch the-force.txt
 cd ..
 rm -r death-star
+cd galaxy-far-far-away/
+mv x-wing/ millenium-falcon/ ./yavin-4/
