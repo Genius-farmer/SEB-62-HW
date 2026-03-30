@@ -19,8 +19,15 @@ cd ../../../death-star
 cp storm-trooper.txt ../galaxy-far-far-away/tatooine/
 cd ../galaxy-far-far-away/tatooine/
 mv luke.txt ben-kenobi.txt ./millenium-falcon/
-cd ../../tatooine/
-mv millenium-falcon/ ../../galaxy-far-far-away/
-
+mv millenium-falcon ../../galaxy-far-far-away/
+cd ..
+mv millenium-falcon/ ../death-star/
+cd ../death-star/
+mv princess-leia.txt ./millenium-falcon/
 cd millenium-falcon/
 mv ben-kenobi.txt obi-wan.txt
+rm obi-wan.txt
+cd ../../galaxy-far-far-away/
+mkdir yavin-4
+mv ../death-star/millenium-falcon/ yavin-4/
+cd yavin-4/
