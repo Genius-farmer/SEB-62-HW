@@ -1,0 +1,113 @@
+Part I
+
+mkdir star-wars
+ls
+cd star-wars
+pwd
+mkdir death-star
+ls
+cd death-star
+pwd
+touch darth-vader.txt princess-leia.txt storm-trooper.txt
+ls
+cd ..
+pwd
+mkdir galaxy-far-far-away
+ls
+cd galaxy-far-far-away
+pwd
+mkdir tatooine
+ls
+cd tatooine
+pwd
+touch luke.txt ben-kenobi.txt
+ls
+mkdir millenium-falcon
+ls
+cd millenium-falcon
+pwd
+touch han-solo.txt chewbacca.txt
+ls
+
+
+Part II
+
+ls ../../../death-star
+cp ../../../death-star/storm-trooper.txt ../
+
+
+Part III
+
+mv ../luke.txt ../ben-kenobi.txt ./
+ls
+
+
+Part IV
+
+mv ben-kenobi.txt obi-wan.txt
+ls
+
+
+Part V
+
+rm obi-wan.txt 
+
+
+Part VI
+
+cd ../../
+mkdir yavin-4
+ls
+mv tatooine/millenium-falcon yavin-4 
+ls yavin-4
+mkdir yavin-4/x-wing
+ls yavin-4
+ls ../death-star/
+mv ../death-star/princess-leia.txt yavin-4/
+ls yavin-4
+ls yavin-4/millenium-falcon
+mv yavin-4/millenium-falcon/luke.txt yavin-4/x-wing
+ls yavin-4/x-wing
+mv yavin-4/millenium-falcon yavin-4/x-wing ./
+ls
+cd ../death-star
+mkdir tie-fighter-1 tie-fighter-2 tie-fighter-3
+ls
+mv darth-vader.txt tie-fighter-1/
+ls
+ls tie-fighter-1
+cp storm-trooper.txt tie-fighter-2
+ls tie-fighter-2
+cp storm-trooper.txt tie-fighter-3
+ls tie-fighter-3
+mv tie-fighter-1 tie-fighter-2 tie-fighter-3 ../galaxy-far-far-away
+ls ../galaxy-far-far-away 
+
+
+Part VII
+
+rm -r ../galaxy-far-far-away/tie-fighter-2/
+ls ../galaxy-far-far-away
+rm -r ../galaxy-far-far-away/tie-fighter-3/
+ls ../galaxy-far-far-away
+
+
+Part VIII
+
+touch ../galaxy-far-far-away/x-wing/the-force.txt
+ls ../galaxy-far-far-away/x-wing
+pwd
+cd ..
+ls
+rm -r death-star
+ls
+ls galaxy-far-far-away/ 
+mv galaxy-far-far-away/x-wing galaxy-far-far-away/millenium-falcon galaxy-far-far-away/yavin-4
+ls galaxy-far-far-away/yavin-4
+
+
+Part IX
+
+cd ~/Documents 
+rm -r star-wars
+ls

@@ -2,9 +2,14 @@ mkdir star-wars
 cd star-wars/
 mkdir death-star
 cd death-star/
+
+// for touch you can create multiple files
+// i.e. touch darth-vader.txt princess-leia.txt storm-trooper.txt
+
 touch darth-vader.txt
 touch princess-leia.txt
 touch storm-trooper.txt
+
 cd ../../star-wars/
 mkdir galaxy-far-far-away
 cd galaxy-far-far-away/
