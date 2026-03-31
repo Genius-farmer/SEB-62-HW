@@ -1,0 +1,55 @@
+tania@1stLaptop:/mnt/c/users/tania/day-1$ mkdir star-wars
+cd star-wars
+mkdir death-star
+touch darth-vadar.txt princess-leia.txt storm-trooper.txt
+mkdir galaxy-far-far-away
+cd galaxy-far-far-away
+mkdir tatooine
+cd tatooine
+touch luke.txt ben-kenobi-txt
+mkdir millenium-falcon
+cd millenium-falcon
+touch han-solo.txt chewbacca.txt
+ cd ../../..
+touch darth-vadar.txt princess-leia.txt storm-trooper.txt
+cp storm-trooper.txt galaxy-far-far-away/tatooine/
+mv galaxy-far-far-away/tatooine/luke.txt galaxy-far-far-away/tatooine/ben-kenobi.txt galaxy-far-far-away/tatooine/millenium-falcon/
+cd ../../../
+cd tania/day-1/star-wars/galaxy-far-far-away/tatooine/millenium-falcon/
+mv ben-kenobi.txt obi-wan.txt
+rm obi-wan.txt
+cd ../../../..
+cd star-wars/galaxy-far-far-away/
+mkdir yavin-4
+mv tatooine/millenium-falcon/ yavin-4/
+$ cd yavin-4/
+mkdir x-wing
+mv ../../princess-leia.txt yavin-4
+mv ../../princess-leia.txt .
+cd millenium-falcon/
+mv luke.txt x-wing
+mv luke.txt ../x-wing/
+cd ..
+mv  millenium-falcon/ ../../galaxy-far-far-away/
+mv  x-wing/../../
+millenium-falcon/ tatooine/         yavin-4/
+mv x-wing/ ../../galaxy-far-far-away/
+cd ../../death-star/
+mkdir tie-fighter-1 tie-fighter-2 tie-fighter-3
+mv ../d
+darth-vadar.txt  death-star/
+mv ../darth-vadar.txt tie-fighter-1
+cp ../storm-trooper.txt tie-fighter-2
+cp ../storm-trooper.txt tie-fighter-3
+mv tie-fighter-1 tie-fighter-2 tie-fighter-3 ../galaxy-far-far-away/
+cd ../galaxy-far-far-away/
+rm -r tie-fighter-2 tie-fighter-3
+touch the-force.txt
+cd ../
+cd galaxy-far-far-away/x-wing/
+touch the-force.txt
+rm -r ../../death-star/
+cd ../
+mv millenium-falcon/ x-wing/ yavin-4/
+cd ../..
+rm -r star-wars/
