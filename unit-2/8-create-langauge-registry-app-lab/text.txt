@@ -1,0 +1,129 @@
+Tanstack
+1. Install React Query with npm i @tanstack/react-query
+2. Create a QueryClient instance and wrap your application with the QueryClientProvider:
+    a. this allows all components within the QueryClientProvider to access the QueryClient instance and use React Query features.
+```jsx
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
+
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      {/* Your app content */}
+    </QueryClientProvider>
+  );
+}
+```
+
+3. Use the useQuery hook to fetch data in your components:
+    a. The useQuery hook takes a unique key and a function that returns a promise (usually an API call) to fetch data.
+    b. It returns an object containing the data, error, and loading state(pending), which you can use to render your component accordingly.
+```jsx
+import { useQuery } from '@tanstack/react-query';
+function MyComponent() {
+  const { data, error, isLoading } = useQuery(['todos'], fetchTodos);
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+
+  return (
+    <ul>
+      {data.map(todo => (
+        <li key={todo.id}>{todo.title}</li>
+      ))}
+    </ul>
+  );
+}
+
+4. Previous example useQuery is for READ operation while for CREATE, UPDATE, DELETE operations you can use useMutation hook:
+```jsx
+import { useMutation } from '@tanstack/react-query';
+function MyComponent() {    
+  const mutation = useMutation(newTodo => fetch('/todos', {
+    method: 'POST',
+    body: JSON.stringify(newTodo),
+  }));
+
+  const handleAddTodo = () => {
+    mutation.mutate({ title: 'New Todo' });
+  };
+
+  return (
+    <div>
+      <button onClick={handleAddTodo}>Add Todo</button>
+      {mutation.isLoading && <p>Adding todo...</p>}
+      {mutation.error && <p>Error adding todo: {mutation.error.message}</p>}
+    </div>
+  );
+}
+
+
+Testing (unit testing automated testing)
+1. run this line, install 5 packages for testing (note, D is for dev dependencies where it is not needed in production):
+(you can see the packages list under the package.json file)
+npm i -D vitest jsdom @testing-library/react @testing-library/jest-dom @testing-library/user-event
+at the vite.config.ts file, add the following configuration to set up Vitest for testing:
+```ts
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    environment: 'jsdom',
+    setupFiles: './src/test/setup.ts',
+  },
+});
+```
+
+2. Create a setup file for testing (e.g., src/test/setup.ts) to configure the testing environment:
+```ts 
+import '@testing-library/jest-dom';
+// You can add any global setup or configuration for your tests here
+```
+3. Write test cases for your components using the testing library:
+```jsx
+import { render, screen } from '@testing-library/react';
+import MyComponent from './MyComponent';
+test('renders todo items', () => {
+  const mockData = [
+    { id: 1, title: 'Todo 1' },
+    { id: 2, title: 'Todo 2' },
+  ];
+
+  // Mock the useQuery hook to return the mock data
+  jest.mock('@tanstack/react-query', () => ({
+    useQuery: () => ({ data: mockData, isLoading: false, error: null }),
+  }));
+
+  render(<MyComponent />);
+
+  expect(screen.getByText('Todo 1')).toBeInTheDocument();
+  expect(screen.getByText('Todo 2')).toBeInTheDocument();
+});
+
+
+4. Run your tests using the command:
+```bash
+npm run test
+```
+5. Hijack your url (global.fetch = vitest.fn()) to mock API calls in your tests:
+```ts
+import { vi } from 'vitest';
+global.fetch = vi.fn(() =>
+  Promise.resolve({
+    json: () => Promise.resolve([{ id: 1, title: 'Mocked Todo' }]),
+  })
+);  
+
+
+6. Deployment 
+a. Test code
+b. Optimise code 
+  i. Lazy loading: instead of loading all components at once, you can load them on demand using React's lazy and Suspense features. This can improve the initial load time of your app.
+c. Build app
+d. Upload to server
+e. Configure server (react app is a single page application, you have to configure to static file and redirect all routes to index.html)
+f. Compile (npm run build) then check if your config is SPA and static
+
