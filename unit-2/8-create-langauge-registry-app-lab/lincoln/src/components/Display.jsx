@@ -47,7 +47,7 @@ const Display = () => {
     });
 
     if (!res.ok) {
-      throw new Error("cannot fetch user data, check url or connection");
+      throw new Error("cannot add user data, check url or input");
     }
 
     return await res.json();
@@ -70,7 +70,9 @@ const Display = () => {
     });
 
     if (!res.ok) {
-      throw new Error("cannot fetch language data, check url or connection");
+      throw new Error(
+        "cannot add language data, check url or input (cannot be empty, more than 20 characters)",
+      );
     }
 
     return await res.json();
@@ -86,10 +88,17 @@ const Display = () => {
   //---------------------RETURN--------------------------------
   return (
     <div className="container">
-      {JSON.stringify(query.data)}
-      <br />
-      {JSON.stringify(query2.data)}
       <h1>User-Language Management System</h1>
+      {addUserMutation.isLoading && <h3>Loading...</h3>}
+      {addUserMutation.isError && <h3>{addUserMutation.error.message}</h3>}
+      {query2.isPending && <h3>Loading...</h3>}
+      {query2.isError && <h3>{query2.error.message}</h3>}
+      {addLanguageMutation.isLoading && <h3>Loading...</h3>}
+      {addLanguageMutation.isError && (
+        <h3>{addLanguageMutation.error.message}</h3>
+      )}
+      {query.isPending && <h3>Loading...</h3>}
+      {query.isError && <h3>{query.error.message}</h3>}
       <div className="row">
         <input
           type="text"
@@ -120,12 +129,6 @@ const Display = () => {
         <div className="col-md-6">List of recorded LANGUAGES</div>
         <div className="col-md-6"></div>
       </div>
-      {addLanguageMutation.isLoading && <h3>Loading...</h3>}
-      {addLanguageMutation.isError && (
-        <h3>{addLanguageMutation.error.message}</h3>
-      )}
-      {query.isPending && <h3>Loading...</h3>}
-      {query.isError && <h3>{query.error.message}</h3>}
 
       {query.isSuccess &&
         query.data.map((item) => {
@@ -140,13 +143,11 @@ const Display = () => {
         })}
       <br />
       <div className="row">
-        <div className="col-md-6">List of USERS</div>
+        <div className="col-md-2">USERS</div>
+        <div className="col-md-2">AGE</div>
+        <div className="col-md-2">COUNTRY</div>
         <div className="col-md-6"></div>
       </div>
-      {addUserMutation.isLoading && <h3>Loading...</h3>}
-      {addUserMutation.isError && <h3>{addUserMutation.error.message}</h3>}
-      {query2.isPending && <h3>Loading...</h3>}
-      {query2.isError && <h3>{query2.error.message}</h3>}
 
       {query2.isSuccess &&
         query2.data.map((item) => {
@@ -155,6 +156,8 @@ const Display = () => {
               key={item.name}
               id={item.id}
               user={item.name}
+              age={item.age}
+              country={item.country}
               getData={getData2}
             />
           );
