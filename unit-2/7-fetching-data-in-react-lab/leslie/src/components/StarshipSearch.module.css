@@ -1,0 +1,38 @@
+input {
+  background-color: #f9fafb;
+  font-weight: 700;
+  color: black;
+  border: 2px solid #ffe81f;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  width: 50%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.search {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  background-color: #ffe81f;
+  color: black;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: 2px solid #ffe81f;
+  font-weight: 600;
+}
+
+.baseline {
+  align-items: baseline;
+}
+
+.padding-left-0 {
+  padding-left: 0;
+}
+
+.reset {
+  border-radius: 0.5rem;
+  margin-left: 2rem;
+}

@@ -1,0 +1,27 @@
+.container {
+  margin: 1rem;
+}
+
+.formDiv {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 60%;
+  row-gap: 1rem;
+  padding: 1rem;
+}
+
+.bookCardsDiv {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 1rem 0;
+}
+
+.bookCardsDiv > div {
+  background-color: darkgray;
+  width: 20rem;
+  padding: 1rem;
+  border: 2px solid black;
+}

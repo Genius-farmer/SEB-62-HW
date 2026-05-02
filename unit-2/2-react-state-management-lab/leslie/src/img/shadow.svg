@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" role="img" aria-labelledby="title desc">
+  <title id="title">Shadow zombie portrait</title>
+  <desc id="desc">A stealthy zombie wrapped in a dark hood and deep shadows.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#040506" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="420" rx="34" fill="url(#bg)" />
+  <ellipse cx="160" cy="142" rx="78" ry="82" fill="#8f745f" />
+  <path d="M74 158c10-59 49-98 86-98s76 39 86 98c-30-23-57-34-86-34s-56 11-86 34Z" fill="#1f2937" />
+  <path d="M90 210c18-26 37-41 70-41s52 15 70 41v93H90Z" fill="#0b0f14" />
+  <path d="M123 146c10-8 22-12 37-12s27 4 37 12" fill="none" stroke="#6e5b4b" stroke-width="7" stroke-linecap="round" />
+  <circle cx="133" cy="152" r="9" fill="#d5f2ff" />
+  <circle cx="187" cy="152" r="9" fill="#d5f2ff" />
+  <path d="M140 182c11 7 20 7 31 0" fill="none" stroke="#472222" stroke-width="6" stroke-linecap="round" />
+  <path d="M102 288h116l22 66H80Z" fill="#121826" />
+  <path d="M84 110c28-12 113-12 148 0" fill="none" stroke="#374151" stroke-width="10" stroke-linecap="round" opacity="0.75" />
+</svg>

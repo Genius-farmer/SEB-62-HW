@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" role="img" aria-labelledby="title desc">
+  <title id="title">Sharpshooter zombie portrait</title>
+  <desc id="desc">A zombie sharpshooter with a patched eyepiece, lean face, and focused gaze.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#74221f" />
+      <stop offset="100%" stop-color="#170607" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="420" rx="34" fill="url(#bg)" />
+  <circle cx="160" cy="147" r="78" fill="#d9b18d" />
+  <path d="M92 139c14-37 41-61 68-61s54 24 68 61c-25-11-45-17-68-17s-43 6-68 17Z" fill="#452d2c" />
+  <path d="M97 214c15-27 34-39 63-39s48 12 63 39v89H97Z" fill="#3b2524" />
+  <path d="M109 147c16-8 31-12 51-12s35 4 51 12" fill="none" stroke="#d9c5a2" stroke-width="7" stroke-linecap="round" />
+  <circle cx="132" cy="154" r="10" fill="#161616" />
+  <circle cx="186" cy="154" r="10" fill="#161616" />
+  <circle cx="194" cy="152" r="16" fill="none" stroke="#f7f1cc" stroke-width="5" />
+  <path d="M145 184c12 8 27 8 39 0" fill="none" stroke="#6d271f" stroke-width="7" stroke-linecap="round" />
+  <path d="M113 289h94l30 66H83Z" fill="#4a3030" />
+  <path d="M88 118l32 20" stroke="#f7f1cc" stroke-width="8" stroke-linecap="round" opacity="0.8" />
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" role="img" aria-labelledby="title desc">
+  <title id="title">Scavenger zombie portrait</title>
+  <desc id="desc">A scavenger zombie wearing a patched cap, straps, and junkyard gear.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6e4d22" />
+      <stop offset="100%" stop-color="#16110c" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="420" rx="34" fill="url(#bg)" />
+  <circle cx="160" cy="150" r="82" fill="#c89e7c" />
+  <path d="M82 135c18-38 47-62 78-62s60 24 78 62c-31-12-52-18-78-18s-47 6-78 18Z" fill="#4e3d2e" />
+  <path d="M110 214c18-28 32-39 50-39s32 11 50 39v86H110Z" fill="#55402e" />
+  <path d="M103 120h116l8 34H95Z" fill="#2b2420" />
+  <path d="M118 145c16-12 29-18 42-18 15 0 28 6 42 18" fill="none" stroke="#c8b08a" stroke-width="8" stroke-linecap="round" />
+  <circle cx="132" cy="151" r="10" fill="#171717" />
+  <circle cx="187" cy="151" r="10" fill="#171717" />
+  <path d="M142 181c10 7 24 7 34 0" fill="none" stroke="#742a24" stroke-width="7" stroke-linecap="round" />
+  <path d="M101 255c24 8 95 8 118 0" fill="none" stroke="#a87a3c" stroke-width="14" stroke-linecap="round" />
+  <path d="M111 293l98 0 25 70H86Z" fill="#756143" />
+  <circle cx="240" cy="290" r="22" fill="#8f8f7a" opacity="0.55" />
+</svg>

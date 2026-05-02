@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  background-color: #0b0b0b;
+  font-family: system-ui, sans-serif;
+  color: #e5e5e5;
+}
+
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #1f1f1f;
+  border-radius: 16px;
+}
+
+h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 30px;
+}

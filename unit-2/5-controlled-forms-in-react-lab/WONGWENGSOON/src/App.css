@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  background-color: #242424;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+}
+
+.bookshelfDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formDiv {
+  border: 1px solid white;
+  padding: 32px;
+  margin: 24px;
+  width: 220px;
+}
+
+.formDiv h3 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 8px;
+  padding: 6px;
+  background-color: #3a3a3a;
+  color: white;
+  border: 1px solid gray;
+}
+
+button {
+  margin-top: 8px;
+  padding: 12px;
+  background-color: #7e57c2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.bookCardsDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.bookCard {
+  background-color: #aaa;
+  color: black;
+  border: 1px solid white;
+  width: 120px;
+  min-height: 150px;
+  padding: 8px;
+}
