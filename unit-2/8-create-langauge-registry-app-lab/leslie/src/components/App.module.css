@@ -1,0 +1,96 @@
+.listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid black;
+  margin-bottom: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid #00000022;
+  background-color: rgb(220, 215, 154);
+  border-radius: 0.5rem;
+}
+
+.cardSection {
+  border-radius: 0.5rem;
+  background-color: rgb(252, 250, 229);
+  padding: 0.4rem;
+}
+
+.break {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.sub {
+  font-size: 0.8rem;
+  color: #00000099;
+}
+
+.emphasis {
+  font-size: 0.8rem;
+  color: #000000dd;
+  margin-bottom: 0.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.form > input {
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #000000;
+  width: 65%;
+}
+
+.form button,
+.actions button {
+  padding: 0.2rem 1%;
+  border-radius: 0.5rem;
+  border: 2px solid #000000;
+  background-color: #000000;
+  color: #fff;
+  width: 25%;
+  font-size: 0.6rem;
+}
+
+.form button:disabled,
+.actions button:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  color: #fff;
+  width: 25%;
+}
+
+.form > div {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.actions {
+  margin-top: 0.5rem;
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: baseline;
+}
+
+.select {
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  border: 2px solid #000000;
+  min-width: 80%;
+}
