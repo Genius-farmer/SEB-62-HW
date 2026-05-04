@@ -3,6 +3,9 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import ItemCard from "./ItemCard";
 import PersonDetail from "./PersonDetail";
 
+// Desmond's comments
+// Nice use if TanStack Query.
+
 const Display = () => {
   const queryClient = useQueryClient();
   const url = "http://localhost:5001";
@@ -98,6 +101,7 @@ const Display = () => {
       <div className="grid">
         <div className="column">
           <h2>Add Person</h2>
+          {/* Desmond's comments: you don't need to use <form></form> for React, this would save you from using preventDefault. */}
           <form
             onSubmit={(event) => {
               event.preventDefault();
