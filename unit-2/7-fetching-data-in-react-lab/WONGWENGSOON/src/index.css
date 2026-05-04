@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  font-family: "Oxygen", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1a1a1a 0%, #000 55%), #000;
+  color: #f7f7f7;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.app-title {
+  margin: 0 0 1.75rem;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.starship-search {
+  border: 1px solid #2e2e2e;
+  border-radius: 14px;
+  padding: 1rem;
+  background-color: #0d0d0d;
+}
+
+.search-meta,
+.search-hint {
+  margin: 0 0 0.6rem;
+  color: #d8d8d8;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+input {
+  flex: 1;
+  border: 1px solid #404040;
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+  background-color: #111;
+  color: #f7f7f7;
+}
+
+input::placeholder {
+  color: #8e8e8e;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+button {
+  border: 1px solid #4e4e4e;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  background-color: #f5f5f5;
+  color: #111;
+  cursor: pointer;
+  transition:
+    transform 150ms ease,
+    opacity 150ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  opacity: 0.94;
+}
+
+.secondary-button {
+  background-color: #1a1a1a;
+  color: #f7f7f7;
+  border-color: #4a4a4a;
+}
+
+.starship-list {
+  margin-top: 1.2rem;
+}
+
+.starship-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.starship-card {
+  border: 1px solid #323232;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #111 0%, #090909 100%);
+  padding: 1rem;
+}
+
+.starship-card h2 {
+  margin: 0 0 0.55rem;
+  font-size: 1.1rem;
+}
+
+.starship-card p {
+  margin: 0.2rem 0;
+  color: #d2d2d2;
+}
+
+.empty-state {
+  text-align: center;
+  color: #e0e0e0;
+  margin-top: 1.4rem;
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding-top: 2rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+}
