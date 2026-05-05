@@ -24,6 +24,8 @@ const DisplayPeople = ({ languages, refreshLanguages }) => {
   };
 
   const addUser = async () => {
+    // Desmond's comments
+    // Good work in trimming and parsing.
     const name = nameRef.current.value.trim();
     const age = parseInt(ageRef.current.value);
     const country = countryRef.current.value.trim();

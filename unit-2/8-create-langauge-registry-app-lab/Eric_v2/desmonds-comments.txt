@@ -1,0 +1,4 @@
+Good that you tried using TanStack Query
+
+Display.jsx, line 102
+Just FYI, the <form> is not needed in React, this would save from using preventDefault().
