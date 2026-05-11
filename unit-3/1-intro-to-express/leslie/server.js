@@ -6,7 +6,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// 1. Be Polite, Greet the User
 app.use("/", lab1Controllers);
 
 app.listen(5001);
