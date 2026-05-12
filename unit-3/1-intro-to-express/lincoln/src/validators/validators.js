@@ -13,6 +13,7 @@ export const validateRolledNumber = [
   param("number", "input must be a number").isInt({ min: 1 }),
 ];
 
+// learnt that if validator function not found on documentation or unknown, use custom() to create your own. Must return true if valid, else throw Error.
 export const validateCollectibles = [
   param("index", "index is required").exists(),
   param("index", "index must be a number which cannot be negative").isInt({
